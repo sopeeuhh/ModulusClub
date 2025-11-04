@@ -142,3 +142,75 @@ body, html {
         transform: translate(-10px, 100%) rotate(-10deg);
     }
 }
+
+/*WORKSHOP SECTION*/
+.workshop {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.workshop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/*TILES*/
+
+.workshop-tiles {
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, 290px);
+    grid-template-rows: repeat(2,280px);
+    gap: 3rem;
+    z-index: 10;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tile img {
+    width: 90%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.tile-btn {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #5583ab;
+    border-radius: 8px;
+    color: #5583ab;
+    font-weight: 700;
+    font-family: 'Lexend' sans-serif;
+    transition: all 0.3s;
+}
+
+.tile-btn:hover {
+    background-color: #5583ab;
+    color: white;
+    border-color: #5583ab;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0, 0.2);
+}
