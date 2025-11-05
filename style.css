@@ -262,38 +262,3 @@ body, html {
 
 
 
-/*RESPONSIVE*/
-.page-wrapper {
-    transform-origin: top center;
-    transition: transform 0.3s ease;
-}
-
-@media (max-width: 1400px) {
-    .page-wrapper {
-        transform: scale(0.9);
-    }
-}
-
-@media (max-width: 1200px) {
-    .page-wrapper {
-        transform: scale(0.8);
-    }
-}
-
-@media (max-width: 1000px) {
-    .page-wrapper {
-        transform: scale(0.7);
-    }
-}
-
-@media (max-width: 800px) {
-    .page-wrapper {
-        transform: scale(0.6);
-    }
-}
-
-@media (max-width: 600px) {
-    .page-wrapper {
-        transform: scale(0.5);
-    }
-}
