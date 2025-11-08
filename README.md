@@ -1,0 +1,1 @@
+Club website for Sherwood High School's Modulus Club! This club has a bunch of links to very helpful tutorials, how students can join the club, information about our club, and a gallery of our peers' works! 
