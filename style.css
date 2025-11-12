@@ -348,19 +348,18 @@ section img {
     display: block;
 }
 
-/* MOBILE FIX */
 @media (max-width: 768px) {
 
-    /* Sections should shrink to fit image naturally */
+    /* Sections adjust height automatically */
     .main, .about, .gallery, .workshop {
-        height: auto;      /* section height matches image */
+        height: auto; 
     }
 
-    /* Banner images */
+    /* Banner images show full image */
     .main img, .about img, .gallery img, .workshop img {
-        width: 100%;       /* fill width of screen */
-        height: 100vh;     /* limit to viewport height */
-        object-fit: contain; /* show full image without cropping */
+        width: 100%;
+        height: auto; /* <- this is the key fix */
+        object-fit: contain;
         display: block;
     }
 
