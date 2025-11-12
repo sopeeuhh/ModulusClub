@@ -339,31 +339,22 @@ body, html {
 
 /*REPSONSIVE*/
 
-/* Banner images for desktop */
+/* Banner images (all sections) */
 section img {
-    width: 100%;
-    height: 100vh; /* full screen height */
-    object-fit: cover; /* desktop: fills screen, may crop edges */
-    object-position: center;
+    width: 100%;       /* fill width */
+    height: auto;      /* height adjusts automatically */
+    max-height: 100vh; /* won't exceed screen height */
+    object-fit: contain; /* show full image, no cropping */
     display: block;
 }
 
-/* Banner images for mobile */
 @media (max-width: 768px) {
-    section img {
-        height: auto;       /* adjust height automatically */
-        max-height: 100vh;  /* cannot exceed full screen height */
-        object-fit: contain; /* show full image, no cropping */
-        object-position: center;
-    }
-
-    /* Adjust overlay content so it stays centered */
     .main-content,
     .about-content,
     .gallery-content,
     .workshop-tiles {
         left: 50%;
-        transform: translateX(-50%); /* center horizontally */
+        transform: translateX(-50%);
         padding: 1rem;
     }
 
@@ -374,7 +365,7 @@ section img {
     .about-content {
         top: 55%;
         width: 90%;
-        padding: 1.5rem;
+        padding: 1rem;
         font-size: 1rem;
     }
 
