@@ -348,36 +348,54 @@ section img {
     display: block;
 }
 
+/* MOBILE FIX */
 @media (max-width: 768px) {
-    /* let the section height adjust naturally */
-    .main,
-    .about,
-    .gallery,
-    .workshop {
-        height: auto; /* allow section to fit image naturally */
+
+    /* Sections should shrink to fit image naturally */
+    .main, .about, .gallery, .workshop {
+        height: auto;      /* section height matches image */
     }
 
-    section img {
-        width: 100%;
-        height: auto;      /* scale naturally */
-        object-fit: contain; /* show full image */
+    /* Banner images */
+    .main img, .about img, .gallery img, .workshop img {
+        width: 100%;       /* fill width of screen */
+        height: 100vh;     /* limit to viewport height */
+        object-fit: contain; /* show full image without cropping */
         display: block;
     }
 
-    /* adjust overlay content */
+    /* Overlay content */
     .main-content,
     .about-content,
     .gallery-content,
     .workshop-tiles {
+        position: absolute;
+        top: 50%; 
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         padding: 1rem;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
     }
 
-    .main-content { top: 60%; }
-    .about-content { top: 55%; width: 90%; padding: 1rem; font-size: 1rem; }
-    .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .workshop-tiles { grid-template-columns: 1fr; grid-template-rows: auto; gap: 1.5rem; top: 55%; right: 50%; transform: translateX(50%); }
+    /* Grid and buttons adjustments */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 
-    .tile-btn, .main-btn { font-size: 0.9rem; padding: 0.5rem 1rem; }
+    .workshop-tiles {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1.5rem;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: auto;
+    }
+
+    .tile-btn, .main-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
 }
