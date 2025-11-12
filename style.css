@@ -423,5 +423,12 @@ body, html {
         padding: 0.4rem 0.8rem;
     }
 }
+@media (max-width: 768px) {
+  section img {
+    height: 100vh;
+    object-fit: contain;
+    background-color: #000; /* optional */
+  }
+}
 
 
