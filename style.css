@@ -335,6 +335,9 @@ body, html {
 }
 
 
+
+
+
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
@@ -445,6 +448,5 @@ body, html {
     
     .about-content p {
         font-size: 1rem;
-    }
-}
+    
 
